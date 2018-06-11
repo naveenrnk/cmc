@@ -1,0 +1,26 @@
+<ion-view ng-controller="HomeCtrl" style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+	<ion-content >
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+	<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+  <p style="text-align:center;color:#fff;font-weight:bold;" ng-model="reload">{{reload}}</p>
+  <div style="width:100%;text-align:center;">
+    <ion-spinner ng-show="show"></ion-spinner>
+      </div>
+		<div class="list" style="width:95%;margin:0px auto;">
+      
+      
+			<div ng-repeat="x in list" style="margin-bottom:10px;">
+  <a class="item item-icon-left" href="#/displaytimeslots"  ng-click="getSelectedDoctor(x)" style="border-radius:4px;">
+    <i class="icon ion-ios-information-outline"></i>
+    Doctor
+    <span class="item-note" ng-model="firstname">
+      {{x.firstname + " " + x.lastname}}
+    </span>
+  </a>
+  </div>
+</div>
+	</ion-content>
+</ion-view>

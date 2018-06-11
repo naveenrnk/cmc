@@ -1,0 +1,42 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+	<ion-content ng-controller="HomeCtrl" >
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+		<div class="list" style="width:95%;margin:0px auto;">
+  <p class="item item-icon-left" href="#" style="border-radius:4px;margin-bottom:5px;">
+    <i class="icon ion-ios-information-outline"></i>
+    First Name
+    <span class="item-note" ng-model="firstname">
+      {{firstname}}
+    </span>
+  </p>
+  <p class="item item-icon-left" href="#" style="border-radius:4px;margin-bottom:5px;">
+    <i class="icon ion-ios-information-outline"></i>
+    Last Name
+    <span class="item-note" ng-model="lastname">
+      {{lastname}}
+    </span>
+  </p>
+ <p class="item item-icon-left" href="#" style="border-radius:4px;margin-bottom:5px;">
+    <i class="icon ion-iphone"></i>
+    Phone
+    <span class="item-note" ng-model="phone">
+      {{phone}}
+    </span>
+  </p>
+  <p class="item item-icon-left" href="#" style="border-radius:4px;margin-bottom:5px;">
+    <i class="icon ion-location"></i>
+    Address
+    <span class="item-note" ng-model="address">
+      {{address}}
+    </span>
+  </p>
+  <p class="item item-icon-left" href="#" style="border-radius:4px;margin-bottom:5px;">
+    <i class="icon ion-email" ></i>
+   Email
+    <span class="item-note item-text-wrap" ng-model="email" style="width:75%;line-height:12px;">
+      {{email}}
+    </span>
+  </p>
+</div>
+	</ion-content>
+</ion-view>

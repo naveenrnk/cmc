@@ -1,0 +1,48 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+	<ion-content ng-controller="Notifications" >
+	<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+    <div style="width:95%;margin:0px auto;">
+			<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+		<div class="list" style="margin-top:15px;">
+
+  <div class="item item-divider" style="border-radius:4px;">
+    Confirmed Appointments
+  </div>
+  <p style="text-align:center;color:#fff;font-weight:bold;" ng-model="reload">{{reloadcon}}</p>
+  <div class="card" ng-repeat="x in confirmedlist" style="margin-top:10px;margin-bottom:10px;border-radius:4px;">
+  <div class="item item-divider">
+    <i class="icon ion-calendar"> Date: </i>{{x.date}}
+    <button class="button button-small button-outline button-calm" style="float:right;font-weight:600;" date="{{x.date}}" time="{{x.time}}" provider="{{x.provider}}" ng-click="cancel(x)">Cancel</button>
+  </div>
+  <div class="item item-text-wrap">
+    <i class="icon ion-clock"> Time: </i>{{x.time}}
+  </div>
+  <div class="item item-divider" >
+    <i class="icon ion-ios-person-outline"> Doctor: </i>{{x.provider}}
+  </div>
+</div>
+ <div class="item item-divider" style="border-radius:4px;">
+   Pending Appointments
+  </div>
+  <p style="text-align:center;color:#fff;font-weight:bold;" ng-model="reload">{{reloadpen}}</p>
+   <div class="card" ng-repeat="x in pendinglist" style="margin-top:10px;margin-bottom:10px;border-radius:4px;">
+  <div class="item item-divider">
+    <i class="icon ion-calendar"> Date: </i>{{x.date}}
+  </div>
+  <div class="item item-text-wrap">
+    <i class="icon ion-clock"> Time: </i>{{x.time}}
+  </div>
+  <div class="item item-divider" style="background:color:#AEB6BF;">
+    <i class="icon ion-ios-person-outline"> Doctor: </i>{{x.provider}}
+  </div>
+</div>
+
+
+
+</div>
+</div>
+	</ion-content>
+</ion-view>

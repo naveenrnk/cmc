@@ -1,0 +1,29 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+<ion-content ng-controller="waitboardctrl" >
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+<div style="width:99%;margin:0px auto;color:#fff;">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+  <p style="text-align:center;">Pull Down to view the latest timings</p>
+  <p style="float:right;color:#D7DBDD;font-size:12px;">Last Updated:<span>{{remains}}</span></p>
+  <table style="text-align:center;width:100%;">
+    <tr style="background:#000;">
+      <th style="width:10%;padding:10px;">#</th>
+      <th style="width:10%;">Initials</th>
+      <th style="width:35%;text-align:center;">Phone # <br> (last 4 digits)</th>
+      <th style="width:45%;text-align:center">Waiting Time</th>
+    </tr>
+  </table>
+  <table style="background:rgba(0,0,0,0.2);font-size:18px;text-align:left;width:100%;" id="board">
+    <tr ng-repeat = "x in response">
+      <td style="width:10%;padding:15px;">{{x.id}}</td>
+      <td style="width:10%;padding:15px;">{{x.firstname | capitalize}}{{x.lastname | capitalize}}</td>
+      <td style="width:35%;padding:15px;text-align:center;;">{{x.phone}}</td>
+      <td style="width:45%;padding:15px;color:#F7DC6F;text-align:center!important;">{{x.timestamp}} </td>
+    </tr>
+  </table>
+</div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+<ion-view ng-controller="clinicHours" style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+  <ion-content >
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+<div class="list" style="width:95%;margin:0px auto;">
+  <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Sunday
+    <span class="item-note">
+      {{sunday}}
+    </span>
+  </a>
+    <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Monday
+    <span class="item-note">
+      {{monday}}
+    </span>
+  </a>
+    <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Tuesday
+    <span class="item-note">
+      {{tuesday}}
+    </span>
+  </a>
+    <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Wednesday
+    <span class="item-note" >
+      {{wednesday}}
+    </span>
+  </a>
+    <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Thursday
+    <span class="item-note">
+      {{thursday}}
+    </span>
+  </a>
+    <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Friday
+    <span class="item-note">
+      {{friday}}
+    </span>
+  </a>
+    <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Saturday
+    <span class="item-note">
+      {{saturday}}
+    </span>
+  </a>
+   <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Holiday
+    <span class="item-note">
+      {{dayleave}}
+    </span>
+  </a>
+   <a class="item item-icon-left"  style="margin-top:2.5%;">
+    <i class="icon ion-ios-clock-outline"></i>
+    Holidays
+    <span class="item-note">
+      {{startday}} to {{endday}}
+    </span>
+  </a>
+</div>
+  </ion-content>
+</ion-view>

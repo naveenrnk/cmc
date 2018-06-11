@@ -1,0 +1,46 @@
+<ion-view can-swipe-back="false" style="background: url('img/bg.png') no-repeat;-webkit-background-size: 100% 100%;">
+	<ion-content ng-controller="HomeCtrl" >
+		<p ng-model="username" style="text-align:center;font-weight:600;font-size:20px;color:#fff;margin-top:15px;">Welcome {{firstname}}</p>
+		<div class="list" style="margin:0px auto;width:95%;">
+
+  <a class="item item-icon-left" href="#/patientprofile" style="margin-bottom:4px;border-radius:4px;">
+    <i class="icon ion-person" style="color:#00A6FB"></i>
+    Your Profile
+  </a>
+
+  <a class="item item-icon-left" href="#/checkappointments" style="margin-bottom:4px;border-radius:4px;" >
+    <i class="icon ion-ios-checkmark-outline" style="color:#00A6FB"></i>
+    Check Appointments
+
+  </a>
+
+  <a class="item item-icon-left" href="#/dlist" style="margin-bottom:4px;border-radius:4px;">
+    <i class="icon ion-ios-timer-outline" style="color:#00A6FB"></i>
+    Active Wait Time
+
+  </a>
+
+  <a class="item item-icon-left" href="#/contactsecratary" style="margin-bottom:4px;border-radius:4px;">
+    <i class="icon ion-person-stalker" style="color:#00A6FB"></i>
+    Contact Secratory
+
+  </a>
+
+  <a class="item item-icon-left" href="#/clinichours" style="margin-bottom:4px;border-radius:4px;">
+    <i class="icon ion-ios-time" style="color:#00A6FB"></i>
+    Doctors Schedules
+
+  </a>
+  <a class="item item-icon-left" href="#/notifications" style="margin-bottom:4px;border-radius:4px;" ng-click="clearnotification()">
+    <i class="icon ion-alert" style="color:#00A6FB"></i>
+    Notification Center
+   <span class="badge badge-assertive" ng-model="notification">{{notification}}</span>
+  </a>
+    <a class="item item-icon-left" href="#/logout" style="margin-bottom:4px;border-radius:4px;" ng-click="logout()">
+    <i class="icon ion-log-out" style="color:#00A6FB"></i>
+    Logout
+
+  </a>
+</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+.popup-body{text-align: center;}
+.item{border:1px solid #fff;}
+ion-spinner * {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+  fill: #fff;
+}
+[nav-view-transition="ios"][nav-view-direction="forward"],
+[nav-view-transition="ios"][nav-view-direction="back"] {
+    background-color: transparent;
+}
+body{background: transparent;}
+#board tr:nth-child(even) {
+    background: rgba(0,0,0,0.2)!important;
+}

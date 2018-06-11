@@ -1,0 +1,81 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+<ion-content ng-controller="CheckIn">
+<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+  <p style="text-align:center;color:#fff;font-weight:bold;" ng-model="reload">{{reloadcon}}</p>
+<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+<p ng-show="show" style="text-align:center;font-weight:600;color:#fff;">Sorry You Have No Appointments for today</p>
+	<div class="list card" style="border-radius:4px;padding:5px;background:transparent;border:2px solid #fff;" ng-repeat="x in confirmedlist">
+  <div class="item" style="padding:0px;text-align:left;background:transparent;border:none;">
+  	<table style="width:80%;color:#fff;margin:0px auto;">
+  		<tr>
+  			<td style="width:45%;text-align:center;padding:4px;">
+  				<p class="icon ion-clock" style="font-size:22px;color:#fff;"></p>
+  			</td>
+  			<td style="width:55%;text-align:left;padding:4px;">
+  				{{x.time}}
+  			</td>
+  		</tr>
+  			<tr>
+  			<td style="width:45%;text-align:center;padding:4px;">
+  				<p class="icon ion-person" style="font-size:22px;color:#fff;"></p>
+  			</td>
+  			<td style="width:55%;text-align:left;padding:4px;">
+  				{{x.provider}}
+  			</td>
+  		</tr>
+  			<tr>
+  			<td style="width:45%;text-align:center;padding:4px;">
+  				<p class="icon ion-calendar" style="font-size:22px;color:#fff;"> </p>
+  			</td>
+  			<td style="width:55%;text-align:left;padding:4px;">
+  				{{x.date}}
+  			</td>
+  		</tr>
+  	</table>
+  </div>
+
+  <div class="item item-body" style="text-align:center;background:transparent;border:none;">
+  	<button class="button button-block button-outline" style="color:#fff;border: 2px solid #7DCEA0;" ng-click="checkin(x)">CheckIn</button>
+  </div>
+
+</div>
+  <div class="list card" style="border-radius:4px;padding:5px;background:transparent;border:2px solid #fff;" ng-repeat="x in confirmedlist2">
+  <div class="item" style="padding:0px;text-align:left;background:transparent;border:none;">
+    <table style="width:80%;color:#fff;margin:0px auto;">
+      <tr>
+        <td style="width:45%;text-align:center;padding:4px;">
+          <p class="icon ion-clock" style="font-size:22px;color:#fff;"></p>
+        </td>
+        <td style="width:55%;text-align:left;padding:4px;">
+          {{x.time}}
+        </td>
+      </tr>
+        <tr>
+        <td style="width:45%;text-align:center;padding:4px;">
+          <p class="icon ion-person" style="font-size:22px;color:#fff;"></p>
+        </td>
+        <td style="width:55%;text-align:left;padding:4px;">
+          {{x.provider}}
+        </td>
+      </tr>
+        <tr>
+        <td style="width:45%;text-align:center;padding:4px;">
+          <p class="icon ion-calendar" style="font-size:22px;color:#fff;"> </p>
+        </td>
+        <td style="width:55%;text-align:left;padding:4px;">
+          {{x.date}}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="item item-body" style="text-align:center;background:transparent;border:none;">
+    <button class="button button-block button-outline" style="color:#fff;border: 2px solid #7DCEA0;" ng-model="waitstatus">{{waitstatus}}</button>
+  </div>
+
+</div>
+</ion-content>
+</ion-view>

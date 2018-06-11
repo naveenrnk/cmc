@@ -1,0 +1,27 @@
+<ion-view can-swipe-back="false" style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+	<ion-content ng-controller="GetSlots">
+	<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+  <div style="width:95%;margin:0px auto;">
+		<div class="list" style="padding:2px;margin-top:20%;">
+  <p class="item item-icon-left" style="margin-bottom:15px;border-radius:4px;" >
+    <i class="icon ion-calendar"></i>
+    Choose Date
+    <span class="item-note">
+      <input type="date" style="margin:0px auto;" ng-change="getslots()" ng-model="appt" id="d">
+    </span>
+  </p>
+  <p class="item item-icon-left" style="margin-bottom:15px;border-radius:4px;">
+    <i class="icon ion-calendar"></i>
+    Choose Time
+    <span class="item-note">
+      <select ng-model="timeslot">
+      	<option value="" selected disabled>Choose</option>
+      	<option ng-repeat="x in select" ng-model="xx">{{x}}</option>
+      </select>
+    </span>
+  </p>
+  <button class="button button-outline button-block button-calm" style="font-weight:600;color:#fff;" ng-click="book()">Book Appointment</button>
+</div>
+</div>
+	</ion-content>
+</ion-view>

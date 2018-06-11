@@ -1,0 +1,40 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%; " >
+<ion-content class="has-header"  ng-controller="MyCtrl">
+
+    <div style="margin-top:35%;">
+      <div class="list card" ng-show="loaderror" style="background:transparent;box-shadow:0 0px 0px rgba(0,0,0,0);">
+
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-person" style="color:#fff;"></i>
+     <input  type="text" ng-model="username" placeholder="Username" ng-click="refresh()" disallow-spaces stopccp style="width:100%;background:#fff;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z0-9]{3,10}$/">
+  </p>
+
+  <p  class="item item-icon-left" style="background:transparent;border:none">
+    <i class="icon ion-edit" style="color:#fff;"></i>
+    <input type="password" ng-model="password" placeholder="Password" ng-click="refresh()" disallow-spaces stopccp style="width:100%;background:#fff;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z0-9]{5,10}$/">
+  </p>
+   <p  class="item item-icon-left" style="background:transparent;border:none;padding-top:5px;">
+    <i class="icon ion-log-in" style="color:#fff;height:90%;"></i>
+    <button class="button button-block button-calm" style="font-size:17px;font-weight:600;border-radius:4px;color:#fff;outline:none;width:100%;" ng-click="login()">Login</button>
+  </p>
+
+
+</div>
+ <div style="text-align:center;">
+<ion-spinner  ng-show="!loaderror"></ion-spinner>
+</div>
+</div>
+<div class="button-bar" style="font-size:12px;padding:4px;">
+  <a href="#/register" class="button button-outline button-calm" style="color:#fff;font-size:16px;">Register</a>
+  <a href="#/forgotpassword" class="button button-outline button-calm" style="color:#fff;font-size:16px;">Forgot Password</a>
+</div>
+<div style="padding:4px;">
+  <a class="button button-full icon ion-clock button-royal" href="#/waitboard"> Waiting Time</a>
+</div>
+
+
+
+
+</ion-content>
+
+</ion-view>

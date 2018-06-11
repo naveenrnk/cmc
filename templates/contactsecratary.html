@@ -1,0 +1,29 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+	<ion-content ng-controller="contact">
+   <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+    <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+    <p style="text-align:center;color:#fff;font-weight:bold;" ng-model="reload">{{reload}}</p>
+    <div style="width:95%;margin:0px auto;">
+		<div class="list" style="margin-top:5%;">
+
+  <a class="item item-icon-left" href="tel:{{phone}}" style="margin-bottom:5px;border-radius:4px;">
+    <i class="icon ion-ios-telephone-outline"></i>
+    Phone
+    <span class="item-note" ng-model="phone">
+      {{phone}}
+    </span>
+  </a>
+    <a class="item item-icon-left" href="mailto:{{email}}" style="border-radius:4px;">
+    <i class="icon ion-ios-email-outline"></i>
+    Email
+    <span class="item-note" ng-model="email" style="font-size:11px;">
+    {{email}}
+    </span>
+  </a>
+</div>
+</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view style="background: url('img/bg.png');-webkit-background-size: 100% 100%;">
+<ion-content ng-controller="RegisterCtrl" >
+<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" style="color:#fff;">Back</a>
+<div style="width:100%;margin:0px auto;">
+
+ <form name="form" ng-submit="register(form)">
+  <div class="list card" style="background:transparent;box-shadow:0 0px 0px rgba(0,0,0,0);">
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-information-circled" style="color:#fff;"></i>
+    <input type="text" placeholder="First Name"  name="fname" ng-model="fname" maxlength="15" style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" disallow-spaces stopccp autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z]*$/">
+  </p>
+
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-information-circled" style="color:#fff;"></i>
+    <input type="text" placeholder="Last Name" name="lname" ng-model="lname" maxlength="15"  style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" disallow-spaces stopccp autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z]*$/">
+  </p>
+
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-email" style="color:#fff;"></i>
+    <input type="text" placeholder="john@suhr.com" name="email" ng-model="email"  style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" disallow-spaces stopccp autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/">
+  </p>
+
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-ios-telephone" style="color:#fff;"></i>
+    <input type="number" placeholder="Mobile Number" name="phone" ng-model="phone"  ng-maxlength="10" style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" disallow-spaces stopccp autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[0-9]{10,10}$/">
+  </p>
+   <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-location" style="color:#fff;"></i>
+    <input type="text" ng-model="postalcode" placeholder="PostalCode" name="postal" maxlength="6"  style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" autocomplete="off" disallow-spaces stopccp autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$/">
+  </p>
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-person" style="color:#fff;"></i>
+    <input type="text" ng-model="uname" placeholder="Username" name="username" maxlength="10"  style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" autocomplete="off" disallow-spaces stopccp autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z0-9]{3,10}$/">
+  </p>
+  <p  class="item item-icon-left" style="background:transparent;border:none;">
+    <i class="icon ion-edit" style="color:#fff;"></i>
+    <input type="password" ng-model="password" placeholder="Password" name="password" maxlength="10"  style="background:#fff;width:100%;border-radius:4px;color:#3498DB;font-size:14px;font-weight:500;padding:12px;height:40px;" disallow-spaces stopccp autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-pattern="/^[a-zA-Z0-9]{5,10}$/">
+  </p>
+  <p class="item" style="background:transparent;border:none;">
+    <ion-checkbox ng-model="hc"  style="background:#3498DB;border-radius:4px;color:#fff;font-size:15px;font-weight:500;text-align:center;">Do you have a health card?</ion-checkbox>
+    
+  </p>
+  <button class="button button-block button-calm"  style="color:#fff;font-weight:700;">Register</button>
+</div>
+
+  </form>
+</div>
+</ion-content>	
+</ion-view>
